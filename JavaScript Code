@@ -1,0 +1,16 @@
+async function startProgram() {
+	setHeading(0);
+	await delay(0.5);
+	setSpeed(145);
+	for (var _i0 = 0; _i0 < 5; ++_i0) {
+		await spin(358, 2.2);
+		await spin(-358, 2.2);
+		await delay(0.025);
+	}
+	stopRoll();
+	await speak('I am the winner', false);
+	for (var _i1 = 0; _i1 < 5; ++_i1) {
+		setMainLed(getRandomColor());
+		await delay(0.025);
+	}
+}
